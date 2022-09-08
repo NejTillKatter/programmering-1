@@ -1,25 +1,31 @@
-
 import random
 
-computer = random.choice(["rock", "paper", "scissors"])
+while True:
 
-user = input("rock, paper or scissors? ")
+    computer = random.choice(["rock", "paper", "scissors"])
 
-print("The computer chose", computer,"and the user chose", user +".")
+    user = input("rock, paper or scissors? ")
 
-# TODO - Implement the if statements that prints who wins
+    print("The computer chose", computer,"and the user chose", user +".")
 
-if user == computer: 
-    print("Draw")
+    # TODO - Implement the if statements that prints who wins
 
-elif user == "rock" and computer == "scissors":
-    print(user, "win")
+    if user == computer: 
+        print("Draw")
 
-elif user == "paper" and computer == "rock":
-    print(user, "win")
+    elif user == "rock" and computer == "scissors":
+        print(user, "win")
 
-elif user == "scissors" and computer == "rock":
-    print(user, "win")
+    elif user == "paper" and computer == "rock":
+        print(user, "win")
 
-else:
-    print(user, "lost, computer won")
+    elif user == "scissors" and computer == "rock":
+        print(user, "win")
+
+    else:
+        print(user, "lost, computer won")
+
+        endrake=input("vill du köra igen?")
+
+        if endrake != "ja":
+         break
