@@ -1,4 +1,4 @@
-seconds = 317567834
+seconds=int(input("how many seconds?"))
 minute = 60
 minutes = seconds // minute
 hour = minutes // 60
