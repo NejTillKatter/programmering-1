@@ -13,14 +13,34 @@ while True:
     if user == computer: 
         print("Draw")
 
+        endrake=input("vill du köra igen?")
+
+        if endrake != "ja":
+         break
+
     elif user == "rock" and computer == "scissors":
         print(user, "win")
+
+        endrake=input("vill du köra igen?")
+
+        if endrake != "ja":
+         break
 
     elif user == "paper" and computer == "rock":
         print(user, "win")
 
+        endrake=input("vill du köra igen?")
+
+        if endrake != "ja":
+         break
+
     elif user == "scissors" and computer == "rock":
         print(user, "win")
+
+        endrake=input("vill du köra igen?")
+
+        if endrake != "ja":
+         break
 
     else:
         print(user, "lost, computer won")

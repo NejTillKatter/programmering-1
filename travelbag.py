@@ -1,4 +1,4 @@
-travelbag = ["tandborste", "kläder", "legitimation"]
+travelbag = ["tandborste", "kläder", "legitimation", "kaka"]
 
 while True:
 
