@@ -1,4 +1,4 @@
-travelbag = ["tandborste", "kläder", "legitimation", "kaka"]
+travelbag = ["tandborste", "kläder", "legitimation", "kakor"]
 
 while True:
 
@@ -8,7 +8,8 @@ while True:
                    "4. Avsluta program\n")
 
    if menyval == "1":
-       print(*travelbag, sep=", ", ) 
+       for i, sak in enumerate(travelbag, sak=1):
+        print(i, sak) 
 
    elif menyval == "2":
        more = input("väljett föremål att lägga till väskan")
