@@ -1,3 +1,6 @@
+from curses.ascii import isdigit
+
+
 travelbag = ["tandborste", "kläder", "legitimation", "kakor"]
 
 while True:
@@ -8,8 +11,8 @@ while True:
                    "4. Avsluta program\n")
 
    if menyval == "1":
-       for i, sak in enumerate(travelbag, sak=1):
-        print(i, sak) 
+       for i, grej in enumerate(travelbag, start=1):
+        print(i, grej) 
 
    elif menyval == "2":
        more = input("väljett föremål att lägga till väskan")
@@ -17,6 +20,8 @@ while True:
 
    elif menyval == "3":
      less = input("välj ett föremål att ta bort")
+     if less.isdigit():
+
      travelbag.remove(less)
 
    elif menyval == "4":
