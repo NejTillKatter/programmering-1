@@ -12,15 +12,21 @@ while True:
         print(i, grej) 
 
    elif menyval == "2":
-       more = input("väljett föremål att lägga till väskan")
+       more = input("väljett föremål att lägga till väskan\n")
        travelbag.append(more)
 
    elif menyval == "3":
-     less = input("välj ett föremål att ta bort")
-     if less.isdigit():
+     less = input("välj ett föremål att ta bort\n")
+     try:
+        if less.isdigit(): 
 
+            travelbag.pop(int(less)-1)
+        else:
+            travelbag.remove(less)
 
-      travelbag.pop(int(less)-1)
+     except:
+        print("\nDet finns inte i resväskan")
+
 
    elif menyval == "4":
-       break
+    break
