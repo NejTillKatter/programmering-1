@@ -1,6 +1,3 @@
-from curses.ascii import isdigit
-
-
 travelbag = ["tandborste", "kläder", "legitimation", "kakor"]
 
 while True:
@@ -22,7 +19,8 @@ while True:
      less = input("välj ett föremål att ta bort")
      if less.isdigit():
 
-     travelbag.remove(less)
+
+      travelbag.pop(int(less)-1)
 
    elif menyval == "4":
        break
