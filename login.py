@@ -64,4 +64,6 @@ while True:
         pass
 
     elif menyval == "5":
+        print("\nDu har valt att avsluta programmet")
+
         break
