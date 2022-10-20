@@ -31,7 +31,10 @@ while True:
              logged_in = True
              print("\nDu har loggat in\n")
         if logged_in == False:
-            print("Fel användarnamn eller lösenord")
+            print("\nFel användarnamn eller lösenord")
+
+        else:
+            print("\nFel användarnamn eller lösenord")
 
 
        
@@ -42,10 +45,10 @@ while True:
 
     elif menyval == "3":
         if logged_in == True:
-            print("Det var en gång som var sandad")
+            print("\nDet var en gång som var sandad")
 
         elif logged_in == False:
-            print("Du måste logga in först")
+            print("\nDu måste logga in först")
 
         
         # TODO skriv ut en rolig historia, men bara om användaren är inloggad
@@ -53,6 +56,9 @@ while True:
         pass
 
     elif menyval == "4":
+        logged_in = False
+        print("Du har loggat ut")
+        
         # TODO Ändra variabeln logged_in till False
         # Bonus: Fråga om de är säkra först
         pass
