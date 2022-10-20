@@ -53,7 +53,7 @@ while True:
         
         # TODO skriv ut en rolig historia, men bara om användaren är inloggad
         # Bonus: Skriv ut en tråkig historia om de inte är inloggade
-        pass
+        
 
     elif menyval == "4":
         logged_in = False
@@ -61,7 +61,7 @@ while True:
         
         # TODO Ändra variabeln logged_in till False
         # Bonus: Fråga om de är säkra först
-        pass
+        
 
     elif menyval == "5":
         print("\nDu har valt att avsluta programmet")
