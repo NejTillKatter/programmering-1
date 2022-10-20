@@ -1,7 +1,7 @@
 # Travelbag
 # Skelettkod till uppgiften
 
-accounts = {"user" : "password"}
+accounts = {}
 logged_in = False
 
 while True:
@@ -15,7 +15,8 @@ while True:
 
     if menyval == "1":
         user = input("Välj användarnamn till kontot\n")
-        password = input("Välj lösenord till kontot\n")
+        password = input("Välj lösenord till kontot")
+        accounts[user] = password
 
         # TODO Skapa ett konto genom att lägga till ett key-value par i accounts
         # username = key, password = value
@@ -25,11 +26,11 @@ while True:
     elif menyval == "2":
         log_user = input("Skriv ditt användarnamn\n")
         log_password = input("skriv ditt lösenord\n")
-        if log_user == user and log_password == password:
-            logged_in = True
-            print("Du har loggat in\n")
-        else:
-            logged_in = False
+        if log_user in accounts:
+            if log_password == accounts[log_user]:
+             logged_in = True
+             print("\nDu har loggat in\n")
+        if logged_in == False:
             print("Fel användarnamn eller lösenord")
 
 
@@ -40,10 +41,11 @@ while True:
         
 
     elif menyval == "3":
-        if logged_in == False:
-            print("logga in")
-        else:
-            
+        if logged_in == True:
+            print("Det var en gång som var sandad")
+
+        elif logged_in == False:
+            print("Du måste logga in först")
 
         
         # TODO skriv ut en rolig historia, men bara om användaren är inloggad
