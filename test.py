@@ -4,7 +4,7 @@ olle = turtle.Turtle()
 
 olle.shape("turtle")
 
-olle.shapesize(4)
+olle.shapesize(2)
 
 olle.pensize(2)
 
