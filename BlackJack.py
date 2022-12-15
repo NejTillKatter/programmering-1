@@ -1,4 +1,23 @@
 import random
+
+#definerar funktionen för att ge nya kort till huset och handen
+def nya(huset, gekort):
+
+    for _ in range(3):
+
+        nytt_kort = gekort.pop(-1)
+        huset.append(nytt_kort)
+
+
+
+#tar bort alla kort i nytt_kort tills det inte finns något kvar
+def tabort(nytt_kort):
+    while nytt_kort != 0:
+
+        nytt_kort.pop(0)
+
+
+
 #skapa kortleken
 färger = [ "hjärter", "ruter", "spader", "klöver" ]
 
@@ -10,20 +29,15 @@ gekort = []
 
 huset = []
 
-#Gör så att listan gekort får 
+#Gör så att listan gekort får alla kort i en kortlek
 for färg in färger:
     for k in kort:
         gekort.append(färg + " " + k)
 
+
+
 #shuffla listan gekort
-
 random.shuffle(gekort)
-
-#definera och ge huset sina kort när koden kallas på
-for _ in range(3):
-    nytt_kort = gekort.pop(-1)
-    huset.append(nytt_kort)
-
 
 
 
@@ -33,14 +47,15 @@ while True:
     
 
     if börja == "Ja":
-        #ger ut korten
-        pass
+        #ger ut korten till huset och handen
+        nya(huset, gekort)
+
+        print(huset)
         
-        
 
 
+    elif börja == "Nej":
 
-    if börja == "Nej":
         break
     else:
         print("\nSkriv Ja eller nej\n")
