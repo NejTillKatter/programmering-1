@@ -19,6 +19,14 @@ def nya(datorkort, kortlek):
 
 
 
+def pop(gekort, datorkort):
+
+    for _ in range(3):
+        gekort.pop(-1)
+        datorkort.pop(-1)
+
+
+
 #Gör två listor n med alla nummer på korten och en med alla färgerna
 färger = [ "hjärter", "ruter", "spader", "klöver" ]
 
@@ -57,7 +65,7 @@ while True:
     #Om inputen börja är Ja händer det under indenten
     if börja == "Ja":
 
-        #Ger ut korten till gekort (handen)
+        #Ger ut korten (gekort) till handen
         nya(gekort, kortlek)
 
         #Skriv ut korten i handen med , som separation
@@ -66,7 +74,10 @@ while True:
         #Delar ut korten genom att kalla funktionen för att ge kort
         nya(datorkort, kortlek)
 
-        print(datorkort)
+        print(datorkort, "är husets kort")
+
+
+        pop(gekort, datorkort)
 
 
 
