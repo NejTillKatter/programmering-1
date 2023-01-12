@@ -1,4 +1,3 @@
-import random
-
-questions = [question1, question2, question3]
-random_question = random.choice(questions)
+for _ in range(2):
+        nya_kort = kortlek.pop(-1)
+        datorkort.append(nya_kort)
