@@ -43,8 +43,10 @@ def handsumma(hand):
     #Ge korten värde så man kan räkna ut poäng när man fått sina kort
     kortvärde = {"ess" : 11, "knekt" : 10, "dam" : 10, "kung" : 10, "10" : 10, "9" : 9, "8" : 8, "7" : 7, "6" : 6, "5" : 5, "4" : 4, "3" : 3, "2" : 2}
     score = 0
-    for card in hand:
-        value = card.split()[1]
+    for kort in hand:
+        #splittar allt i listan kort så att man kan få summan 
+        #genom att ge de värde med hjälp av kortvärde
+        value = kort.split()[1]
         score += kortvärde[value]
 
     return score
@@ -125,7 +127,7 @@ while True:
         print(gekort, "är dina kort")
         print("Värdet är", handsumma(gekort))
         
-        #Delar ut korten till handen och datorn genom 
+        #Delar ut korten till datorn genom 
         #att kalla funktionen för att ge kort
         nya(datorkort, kortlek)
 
